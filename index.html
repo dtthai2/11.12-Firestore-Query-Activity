@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="all_teams"
+      class="has-background-lightgray p-4 m-3 has-background-grey-lighter"
+    >
+      <h1 class="title">Questions</h1>
+
+      <p id="q1"><b>1. Show all teams in Spain.</b></p>
+      <p id="q2"><b>2. Show all teams in Madrid, Spain</b></p>
+      <p id="q3">
+        <b>
+          3. Show all national teams (Remember there might be new national teams
+          added later)</b
+        >
+      </p>
+      <p id="q4"><b>4. Show all teams that are not in Spain</b></p>
+      <p id="q5"><b>5. Show all teams that are not in Spain or England</b></p>
+      <p id="q6"><b>6. Show all teams in Spain with more than 700M fans</b></p>
+      <p id="q7">
+        <b>
+          7. Show all teams with a number of fans in the range of 500M and
+          600M</b
+        >
+      </p>
+      <p id="q8"><b>8. Show all teams where Ronaldo is a top scorer</b></p>
+      <p id="q9">
+        <b
+          >9. Show all teams where Ronaldo, Maradona, or Messi is a top
+          scorer</b
+        >
+      </p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // TODO
+      // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+      // Your web app's Firebase configuration
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCue2yrgTmlPsHSQHKOiYpD7CUSoAAkmw4",
+        authDomain: "soccer-79c32.firebaseapp.com",
+        projectId: "soccer-79c32",
+        storageBucket: "soccer-79c32.firebasestorage.app",
+        messagingSenderId: "1070184972336",
+        appId: "1:1070184972336:web:3e837bb8781d1551a0edf5",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
